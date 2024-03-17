@@ -1,0 +1,60 @@
+
+<form [formGroup]="customerform">
+    <mat-card>
+        <mat-card-content>
+    
+            <mat-form-field class="mat-50">
+                <mat-label>Employee Id</mat-label>
+                <input formControlName="id" matInput>
+            </mat-form-field> 
+        </mat-card-content>
+        <mat-card-footer>
+        <div style="margin:2%;text-align: right;">
+            <button mat-raised-button type="submit"(click)="findById()" color="primary">Find</button>
+           
+        </div>
+        </mat-card-footer>
+    </mat-card>
+    
+    </form>
+    <div class="comment-list">
+        <h2>Employee Record</h2>
+        <table>
+        <thead>
+        <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>Country</th>
+        <th>Term</th>
+        <th>Date of Birth</th>
+        <th>Active</th>
+        </tr>
+        </thead>
+        <tbody>
+      
+           
+          
+        <tr>
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.address }}</td>
+        <td>{{ emp.email }}</td>
+        <td>{{ emp.phone }}</td>
+        <td>{{ emp.country }}</td>
+        <td>{{ emp.term}}</td>
+        <td>{{ emp.dob}}</td>
+        <td>{{ emp.is_Active}}</td>
+        
+        </tr>
+      
+        </tbody>
+        </table>
+       </div> 
+         
+      
+      
+        
+      

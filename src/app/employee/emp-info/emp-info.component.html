@@ -1,0 +1,50 @@
+<div class="comment-list">
+  <h2>Employee Record</h2>
+  <table>
+  <thead>
+  <tr>
+  <th>ID</th>
+  <th>Name</th>
+  <th>Address</th>
+  <th>Email</th>
+  <th>Contact</th>
+  <th>Country</th>
+  <th>Term</th>
+  <th>Date of Birth</th>
+  <th>Active</th>
+  <th>Edit/Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+
+    @for (employees of emp; track employees.id){ 
+    
+  <tr>
+  <td>{{ employees.id }}</td>
+  <td>{{ employees.name }}</td>
+  <td>{{ employees.address }}</td>
+  <td>{{ employees.email }}</td>
+  <td>{{ employees.phone }}</td>
+  <td>{{ employees.country }}</td>
+  <td>{{ employees.term}}</td>
+  <td>{{ employees.dob}}</td>
+  <td>{{ employees.is_Active}}</td>
+  <td>
+  <button type="button" (click)="updateRecord(employees.id!)" class="">
+    Edit |||
+  </button>
+  <button type="button" (click)="employees.id && deleteRecord(employees.id)" class="">
+    Delete 
+  </button>
+</td>
+  
+  </tr>
+}
+  </tbody>
+  </table>
+  <!-- <app-update-employee> [data]=employees</app-update-employee> -->
+ </div> 
+   
+
+
+  
